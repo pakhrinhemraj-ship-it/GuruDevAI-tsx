@@ -239,39 +239,42 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
                 {/* First & Last Name */}
 
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex-1">
+                  <label>First Name</label>
                   <input
                     type="text"
                     name="firstname"
                     value={form.firstname}
                     onChange={handleChange}
                     placeholder="Firstname"
-                    className="w-full border border-[#DFEAF2] rounded-xl h-12 px-4"
-                  />
-
+                    className="w-full border border-[#DFEAF2] rounded-xl h-12 px-4" />
+                  </div>
+                  <div className="flex-1">
+                   <label>Last Name</label>
                   <input
                     type="text"
                     name="lastname"
                     value={form.lastname}
                     onChange={handleChange}
                     placeholder="Lastname"
-                    className="w-full border border-[#DFEAF2] rounded-xl h-12 px-4"
-                  />
+                    className="w-full border border-[#DFEAF2] rounded-xl h-12 px-4" />
+                  </div>
                 </div>
 
                 {/* Phone */}
-
+                <div className="flex-1">
+                <label>Phone</label>
                 <input
                   type="text"
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
                   placeholder="Phone Number"
-                  className="w-full border border-[#DFEAF2] rounded-xl h-12 px-4"
-                />
-
+                  className="w-full border border-[#DFEAF2] rounded-xl h-12 px-4" />
+                 </div>
                 {/* Position */}
-
+                 <label htmlFor="">Position</label>
                 <select
                   name="position"
                   value={form.position}
@@ -287,7 +290,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 </select>
 
                 {/* Gender */}
-
+                 <label htmlFor="">Gender</label>
                 <select
                   name="gender"
                   value={form.gender}
@@ -302,7 +305,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
                 {/* Submit */}
 
-                <div className="flex justify-end">
+                <div className="flex justify-end mb-6">
                   <button
                     type="submit"
                     className="cursor-pointer bg-[#6E54B5] text-white rounded-xl h-12 w-44 hover:bg-[#593eb5]"
